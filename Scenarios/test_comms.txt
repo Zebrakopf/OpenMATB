@@ -1,0 +1,50 @@
+# Scenario template
+# Durations are expressed in milliseconds
+
+# 1. Set tasks parameters
+
+
+
+# 1.d. Communications parameters
+
+0:00:00;communications;callsignregex;[A-Z][A-Z]\d\d
+0:00:00;communications;othercallsignnumber;3
+0:00:00;communications;voicegender;male
+0:00:00;communications;voiceidiom;english
+
+
+0:00:00;communications;start
+
+
+# 3. Set scenario events
+
+# Retrieve participant information :
+
+0:00:00;participantinfo;start
+
+
+# 3.a. System monitoring events
+
+
+# 3.b. Resources management events
+
+
+# 3.c. Tracking events
+
+
+
+# 3.d. Communications events
+# /!\ Be careful to let sufficient time during two prompts to avoid sound overlaping
+
+0:00:01;communications;automaticsolver;False
+0:00:05;communications;radioprompt;own
+0:00:20;communications;radioprompt;other
+0:00:40;communications;radioprompt;own
+
+
+# 4. End tasks at 10 minutes
+
+0:01:00;communications;stop
+
+0:01:01;end
+

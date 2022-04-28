@@ -1,0 +1,41 @@
+# Scenario template
+# Durations are expressed in milliseconds
+
+# 1. Set tasks parameters
+
+
+
+# 1.c. Tracking parameters
+
+0:00:00;track;cursorcolor;#009900
+0:00:00;track;targetradius;0.2
+
+
+# 2. Start appropriate tasks
+
+0:00:00;track;start
+
+
+# 3. Set scenario events
+
+# Retrieve participant information :
+
+0:00:00;participantinfo;start
+
+
+
+
+# 3.c. Tracking events
+
+0:00:01;track;automaticsolver;False
+0:00:01;track;cutofffrequency;0.001
+0:00:20;track;cutofffrequency;0.01
+0:00:40;track;cutofffrequency;0.1
+
+
+# 4. End tasks at 10 minutes
+
+0:01:00;track;stop
+
+0:01:01;end
+

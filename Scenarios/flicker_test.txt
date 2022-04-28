@@ -1,0 +1,27 @@
+# Scenario template
+# Durations are expressed in milliseconds
+
+# 1. Set tasks parameters
+
+
+# 1.a. System monitoring parameters
+
+
+
+
+
+
+# 2. Start appropriate tasks
+
+0:00:00;flicker;start
+
+# 3. Set scenario events
+
+# Retrieve participant information :
+
+
+
+0:01:00;flicker;stop
+
+0:01:01;end
+
