@@ -17,11 +17,13 @@ class Task(QtWidgets.QWidget):
 
         self.info = None
         self.outlet = None
+        self.firstlog = False
 
     def onStart(self):
         try:
             log_info = StreamInfo('LogStream', 'Markers', 1, 0, 'string', 'myuidw43536')
             self.info_outlet = StreamOutlet(log_info)
+            
         except:
             pass
 
@@ -34,4 +36,7 @@ class Task(QtWidgets.QWidget):
     def onLog(self, chain):
 #        print chain
         if hasattr(self, 'info_outlet'):
-            self.info_outlet.push_sample([chain])
+            if self.firstlog == False:
+                if chain.find("RESUME") != -1:
+                    self.info_outlet.push_sample(["start"])
+                    self.firstlog = True
