@@ -13,7 +13,7 @@ from Helpers.Translator import translate as _
 
 # Force import for cxfreeze:
 from Helpers import (QTExtensions, WLight, WPump, WCom,
-                     WScale, WScheduler, WTank, WTrack, xeger)
+                     WScale, WScheduler, WTank, WTrack, WFlicker, xeger)
 
 
 VERSION = "1.1.000"

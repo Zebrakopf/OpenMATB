@@ -16,14 +16,17 @@ class Task(QtWidgets.QWidget):
         self.parameters = {
             'taskplacement': 'fullscreen',
             'frequency': 10,
-            'taskupdatetime': 14,
+            'taskupdatetime': 1,
             'title': 'flicker',
             'amplitude': 100,
+            'amp_reduction': 10,
             'task_duration_min':1
         }
 
         n_seconds = self.parameters['task_duration_min'] * 60 + 100 
-        self.opac_vals = np.sin(2 * np.pi *  self.parameters['frequency'] * np.arange(0,n_seconds,1/1000)) * 100 * 1 + 100
+        self.opac_vals = (1 + np.sin(2 * np.pi * self.parameters['frequency']  * np.arange(0,n_seconds,1/1000))) * (self.parameters['amplitude'] / 2)  
+       # self.opac_vals = np.sin(2 * np.pi *  self.parameters['frequency'] * np.arange(0,n_seconds,1/1000)) * (self.parameters['amplitude'] / 2)  + self.parameters['amplitude'] / 2
+        self.opac_vals = self.opac_vals * (self.parameters['amp_reduction'] / 100)
 
     def onStart(self):
         # Set a WTrack Qt object
