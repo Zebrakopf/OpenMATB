@@ -2,25 +2,14 @@
 # Durations are expressed in milliseconds
 
 # 1. Set tasks parameters
-0:00:00;flicker;frequency;10
+# yields a 10 Hz flicker.. OpenMATB only reads int() values from this .txt file
+0:00:00;flicker;frequency;100 
 0:00:00;flicker;task_duration_min;1
-0:00:00;flicker;amp_reduction;10
-# 1.a. System monitoring parameters
-
-
-
-
-
+0:00:00;flicker;amp_reduction;100
 
 # 2. Start appropriate tasks
 
 0:00:00;flicker;start
-
-# 3. Set scenario events
-
-# Retrieve participant information :
-
-
 
 0:01:00;flicker;stop
 

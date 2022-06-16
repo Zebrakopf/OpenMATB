@@ -31,6 +31,11 @@
 0:00:00;communications;voicegender;male
 0:00:00;communications;voiceidiom;english
 
+#1.e. Flicker parameters
+ # yields a 7.5 Hz flicker.. OpenMATB only reads int() values from this .txt file
+0:00:00;flicker;frequency;75
+0:00:00;flicker;task_duration_min;5
+0:00:00;flicker;amp_reduction;10
 
 # 2. Start appropriate tasks
 
