@@ -40,3 +40,7 @@ class Task(QtWidgets.QWidget):
                 if chain.find("RESUME") != -1:
                     self.info_outlet.push_sample(["start"])
                     self.firstlog = True
+            
+            if chain.find("END") != -1 & chain.find("END_") == -1:
+                self.info_outlet.push_sample(["end"])
+                self.firstlog = True
